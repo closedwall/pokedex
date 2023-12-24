@@ -18,32 +18,26 @@
     transform: translateZ(0);
     transition: transform 0.25s ease-out;
   }
-  .pokemon-detail{
-    
-  }
-  .image-type-group{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .pokemon-type{
-    display: flex;
-    justify-content: left;
-    text-align: left;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .pokemon-image{
-    height: 150px;
-    width: 150px;
-  }
+
   .card-container:hover {
     transform: scale(1.05);
   }
+
+  .model-dialog-box{
+    background-color: #eeeeee;
+    padding: 20px;
+    width: 50vw;
+    border-radius: 20px;
+    padding: 40px;
+  }
   
-  .btn{
-    margin-top: 10px;
-    width: 100%;
-    background-color: #a881af;
-    height: 40px;
+  @media only screen and (max-width: 600px) {
+    .card-list {
+      grid-template-columns: 1fr;
+    }
+    .model-dialog-box{
+      width: 100vw;
+      padding: 20px;
+      border-radius: 0;
+    }
   }

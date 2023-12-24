@@ -1,0 +1,35 @@
+.model-container{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.model-data{
+    display: flex;
+    align-items: center;
+
+}
+
+.stat-name{
+    flex: 2;
+    display: flex;
+    justify-content: right;
+    float: right;
+}
+.stat{
+    flex:1;
+}
+.colored-box {
+    flex: 2;
+    border: 1px solid black;
+    display: inline-block; /* Allows setting width and height */
+    background-color: white; /* Default color for the entire box */
+    position: relative;
+  }
+  
+  .fill {
+    display: block;
+    height: 100%;
+    background-color: red; /* Color to fill the specified percentage */
+  }
+  
