@@ -13,7 +13,7 @@ const Card = ({ id,name, url, imgUrl }) => {
     try {
       const res = await fetch(url);
       const result = await res.json();
-      console.log(result);
+      // console.log(result);
       setStats(result.stats);
       setTypes(result.types);
     } catch (error) {
