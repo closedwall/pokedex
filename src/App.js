@@ -8,8 +8,8 @@ const App = () => {
   const [pokemon, setPokemon] = useState([]);
   const [pokemonCount,setPokemonCount] = useState();
   const [isLoading, setIsLoading] = useState(false);
-  const offset=0;
-  const limit=20;
+  const offset=50;
+  const limit=50;
   const URL = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`;
   const IMGURLBASE =`https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/` ;
 
@@ -23,7 +23,7 @@ const App = () => {
     const pokedata = results.map((pokeobj, index) =>(
       {
         name:pokeobj.name,
-        id:index+1,
+        id:index+1+offset,
         url:pokeobj.url,
       }
     ));
@@ -35,7 +35,7 @@ const App = () => {
     fetchData();
   }, [])
 
-  
+
   return (
     <div className="App">
       <h1 className='app-title'>Pokedex</h1>
